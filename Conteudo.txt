@@ -87,3 +87,31 @@ colocar: use-agent
 :wq
 
 gpgconf --launch gpg-agent
+
+------------------------------------------------------
+Adicionar mais um e-mail na chave:
+
+gpg --edit-key <ID>
+adduid
+
+Deixar novo id confiável:
+uid <indicador do uid (1, 2, 3...)>
+trust
+informar nível de confiança
+save
+------------------------------------------------------
+
+BOAS PRÁTICAS:
+
+Definir uma branch básica/padrão diferente da branch de produção, ou seja, definir como branch base a develop ao invés da main.
+Para isso acessar o git hub, ir em repositório > projeto > settings > branches > default branch e trocar para a branch develop
+
+PROTEÇÃO DA BRANCH:
+
+Ainda em settings, acessar Branch protection rule:
+informar a branch e explorar todas as regras necessárias disponíveis
+
+------------------------------------------------------
+
+PULL REQUEST
+
