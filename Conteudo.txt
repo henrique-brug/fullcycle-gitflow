@@ -1,0 +1,79 @@
+Iniciar repositório:
+git flow init
+
+main > develop
+
+feature
+release
+hotflix: corrigir erro em produção (main), depois faz merge com a main e a develop
+
+Iniciar uma feature:
+git flow feature start <name>
+
+Terminar feature:
+gito flow feature finish <name>
+
+Criar release
+git flow release status <version>
+
+------------------------------------------------------
+Gerando chave GPG e assinando commits
+
+Listar chaves ja existentes
+gpg --list-secret-key --keyid-form LONG
+
+Gerando chave
+gpg --full-generate-key
+
+escolhe qual o tipo de chave quer utilizar e o tamanho
+1 RSA e 4096 bits
+
+definir o tempo da chave: 1y ou 1m (0 nunca expira)
+
+colocar o nome e o endereço de email que esta no git
+
+retorno: rsa4096/DEF921C3C683EEB2
+
+ID da chave gerado: DEF921C3C683EEB2
+
+pegar chave: gpg --armor --export <ID>
+
+------------------------------------------------------
+
+Acecssa o git hub, vai em configurações > SSH and GPG keys > New GPG key
+
+------------------------------------------------------
+Dizer para o GIT qual é chave ele vai usar para assinar os próximos commits 
+
+git config --global user.signingkey <id da chave>
+
+------------------------------------------------------
+Criar variável de ambiente do GPG
+export GPG_TTY=$(tty)
+
+Comando para criar a variável sempre que inicializar o bash do linux:
+vim ~/.bash_profile
+
+colar a variável de ambiente "export GPG_TTY=$(tty)"
+sair e salvar "q!"
+------------------------------------------------------
+assinar por padrão os commits desse repositório atual
+(adicionar --global caso queira assinar por padrão os commits de todos os repositórios)
+git config --global commit.gpgsign true
+
+assinar por padrao todas as tags:
+git config --global tag.gpgsign true
+
+------------------------------------------------------
+Verificar se commit foi assinado:
+git log --show-signature -1
+
+------------------------------------------------------
+Fazer push do código:
+git branch -M main
+Adicionar repositório remoto:
+git remote add origin <URL>
+Exemplo: git remote add origin git@github.com:henrique-brug/fullcycle-gitflow.git
+
+git push -u origin main
+
