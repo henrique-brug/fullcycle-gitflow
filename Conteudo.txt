@@ -72,8 +72,9 @@ git log --show-signature -1
 Fazer push do código:
 git branch -M main
 Adicionar repositório remoto:
+(OBS: Usar caminho https)
 git remote add origin <URL>
-Exemplo: git remote add origin git@github.com:henrique-brug/fullcycle-gitflow.git
+Exemplo: git remote add origin https://github.com/henrique-brug/fullcycle-gitflow.git
 
 git push -u origin main
 
