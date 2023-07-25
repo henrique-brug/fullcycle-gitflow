@@ -78,3 +78,12 @@ Exemplo: git remote add origin https://github.com/henrique-brug/fullcycle-gitflo
 
 git push -u origin main
 
+------------------------------------------------------
+Salvar login:
+
+vim ~/.gnupg/gpp.conf
+
+colocar: use-agent
+:wq
+
+gpgconf --launch gpg-agent
