@@ -121,7 +121,7 @@ realizado pull em repositório local > deletado a branch da feature no repositó
 
 TEMPLATE PARA AS FEATURE
 
-criar pasta dentro do repositório ./github e criar um arquivo com a extensão ".md"
+criar pasta dentro do repositório ./github e criar um arquivo com o nome "PULL_REQUEST_TEMPLATE" e com a extensão ".md"
 Layout exemplo:
  # Description
 
