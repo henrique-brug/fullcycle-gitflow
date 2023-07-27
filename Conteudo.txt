@@ -161,3 +161,18 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
 - [ ] Any dependent changes have been merged and published in downstream modules
+
+------------------------------------------------------
+Semantical versioning
+
+2.1.4
+
+(2) - MAJOR — API PUBLICA
+
+(1) - MINOR - Adicionado funcionalidades, mas compativel com a API
+(4) - PATCH - Bugs, ajustes
+
+MAJOR = @ - API Instavel. Pode mudar a qualquer momento.
+
+1.0.0-alpha.beta < 1.0.0
+
