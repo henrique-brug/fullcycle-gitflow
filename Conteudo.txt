@@ -175,4 +175,14 @@ Semantical versioning
 MAJOR = @ - API Instavel. Pode mudar a qualquer momento.
 
 1.0.0-alpha.beta < 1.0.0
-
+
+------------------------------------------------------
+Seguir padrões de commits
+
+https://www.conventionalcommits.org/en/v1.0.0/
+
+Instalar o commitezen para auxiliar a seguir os padrões na hora de fazer o commit
+Documentação: https://github.com/commitizen/cz-cli
+Instalar no repositório: npm install commitizen -g
+Inicializar: npx commitizen init cz-conventional-changelog --save-dev --save-exact
+nos próximos commits fazer com: "git cz"
